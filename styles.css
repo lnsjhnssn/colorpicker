@@ -1,0 +1,45 @@
+body {
+  padding: 40px 20px 20px;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.color-picker-card {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.color-picker-card label {
+  padding: 0;
+  margin: 0;
+}
+
+.color-picker-card input {
+  padding: 0;
+  margin: 0;
+}
+
+.color-picker-card .hex-display {
+  padding: 0;
+  margin: 0;
+  background-color: #fafafa;
+  color: #000000;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+footer {
+  padding-top: 20px;
+}
