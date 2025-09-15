@@ -3,7 +3,7 @@ const defaultColor = "#000000";
 const colorPicker = document.querySelector("#color-picker");
 const paragraphHexDisplay = document.querySelector("#paragraph-hex-display");
 colorPicker.value = defaultColor;
-colorPicker.addEventListener("input", updateFirstParagraph, false);
+colorPicker.addEventListener("input", updateAllParagraphs, false);
 colorPicker.addEventListener("change", updateAllParagraphs, false);
 colorPicker.select();
 
@@ -28,7 +28,7 @@ const defaultHeadingColor = "#000000";
 const headingColorPicker = document.querySelector("#heading-color-picker");
 const headingHexDisplay = document.querySelector("#heading-hex-display");
 headingColorPicker.value = defaultHeadingColor;
-headingColorPicker.addEventListener("input", updateFirstHeading, false);
+headingColorPicker.addEventListener("input", updateAllHeadings, false);
 headingColorPicker.addEventListener("change", updateAllHeadings, false);
 
 function updateFirstHeading(event) {
