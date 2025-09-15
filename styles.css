@@ -4,16 +4,61 @@ body {
   margin: 0 auto;
 }
 
+/* Mobile responsive body */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+}
+
 .color-picker-card {
   display: grid;
   grid-template-columns: repeat(5, minmax(150px, 1fr));
   grid-template-rows: 1fr;
   align-items: center;
-
   gap: 10px;
-
   width: 100%;
   margin-bottom: 10px;
+}
+
+.color-picker-card input[type="color"] {
+  cursor: pointer;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  .color-picker-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 8px;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .color-picker-card input[type="color"] {
+    width: 100%;
+    height: 48px;
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+    cursor: pointer;
+  }
+
+  .color-picker-card .hex-display {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    margin-top: 4px;
+  }
+
+  /* Better touch targets and visual feedback */
+  .color-picker-card input[type="color"]:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  /* Ensure hex display is easily readable on mobile */
 }
 
 .color-picker-card label {
