@@ -9,12 +9,12 @@
 * Invert the colors if the user has dark mode activated.
 */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --fg: #fff;
     --bg: #111;
   }
-}
+} */
 
 /**
 * 1. Modify the base font-size to 1.25rem, to make everything larger.
