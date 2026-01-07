@@ -18,28 +18,43 @@
 </head>
 
 <body>
-  <div class="pb-l">
-    <div class="color-picker-card">
-      <label for="background-color-picker">Background:</label>
-      <input type="color" value="#ffffff" id="background-color-picker" />
-      <div id="background-hex-display" class="hex-display copy-box">
-        <span>#ffffff</span>
+  <div class="colors-summary">
+
+    <div class="summary-lines">
+      <div class="summary-line">
+        <input type="color" value="#ffffff" id="background-color-picker" aria-label="Background color" />
+        <label for="background-color-picker" class="summary-label">Background</label>
+        <input type="text" class="hex-input" data-hex="background" value="#ffffff" maxlength="7"
+          pattern="^#[0-9A-Fa-f]{6}$" aria-label="Background hex value" />
+      </div>
+      <div class="summary-line">
+        <input type="color" value="#000000" id="heading-color-picker" aria-label="Heading color" />
+        <label for="heading-color-picker" class="summary-label">Headings</label>
+        <input type="text" class="hex-input" data-hex="heading" value="#000000" maxlength="7"
+          pattern="^#[0-9A-Fa-f]{6}$" aria-label="Heading hex value" />
+      </div>
+      <div class="summary-line">
+        <input type="color" value="#000000" id="color-picker" aria-label="Paragraph color" />
+        <label for="color-picker" class="summary-label">Paragraphs</label>
+        <input type="text" class="hex-input" data-hex="paragraph" value="#000000" maxlength="7"
+          pattern="^#[0-9A-Fa-f]{6}$" aria-label="Paragraph hex value" />
       </div>
     </div>
-    <div class="color-picker-card">
-      <label for="heading-color-picker">Headings:</label>
-      <input type="color" value="#000000" id="heading-color-picker" />
-      <div id="heading-hex-display" class="hex-display">
-        <span>#000000</span>
-      </div>
-    </div>
-    <div class="color-picker-card">
-      <label for="color-picker">Paragraphs:</label>
-      <input type="color" value="#000000" id="color-picker" />
-      <div id="paragraph-hex-display" class="hex-display">
-        <span>#000000</span>
-      </div>
-    </div>
+    <button type="button" id="copy-all" class="copy-btn" aria-label="Copy all colors">
+      <span class="state-copy">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="copy-icon">
+          <path d="M9 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2z" />
+          <path d="M5 15H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+        </svg>
+        <span class="copy-label">Copy</span>
+      </span>
+      <span class="state-copied" aria-live="polite">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="copy-icon">
+          <path d="M5 13l4 4L19 7" />
+        </svg>
+        <span class="copy-label">Copied</span>
+      </span>
+    </button>
   </div>
   <h1>Main Heading</h1>
 
