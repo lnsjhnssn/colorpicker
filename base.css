@@ -1,8 +1,9 @@
 /* concrete.css v3.0.0 | MIT License | github.com/louismerlin/concrete.css */
 
 * Set universal color variables */ :root {
-  --fg: #111;
-  --bg: #fff;
+  --fg: #66c2f0;
+  --bg: #2e66d6 ;
+  --heading: #fff;
 }
 
 /**
@@ -168,6 +169,10 @@ h5 {
 
 h6 {
   font-size: 0.67em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
 }
 
 /**
