@@ -1,5 +1,5 @@
 // Text Body Color Picker
-const defaultColor = "#66c2f0";
+const defaultColor = "#edf7fd";
 const colorPicker = document.querySelector("#color-picker");
 const backgroundHexInput = document.querySelector('[data-hex="background"]');
 const headingHexInput = document.querySelector('[data-hex="heading"]');
@@ -25,7 +25,7 @@ function updateAllParagraphs(event) {
 }
 
 // Heading Color Picker
-const defaultHeadingColor = "#ffffff";
+const defaultHeadingColor = "#c2ebff";
 const headingColorPicker = document.querySelector("#heading-color-picker");
 headingColorPicker.value = defaultHeadingColor;
 headingColorPicker.addEventListener("input", updateAllHeadings, false);
