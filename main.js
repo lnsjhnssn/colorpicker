@@ -1,5 +1,5 @@
 // Text Body Color Picker
-const defaultColor = "#000000";
+const defaultColor = "#66c2f0";
 const colorPicker = document.querySelector("#color-picker");
 const backgroundHexInput = document.querySelector('[data-hex="background"]');
 const headingHexInput = document.querySelector('[data-hex="heading"]');
@@ -25,7 +25,7 @@ function updateAllParagraphs(event) {
 }
 
 // Heading Color Picker
-const defaultHeadingColor = "#000000";
+const defaultHeadingColor = "#ffffff";
 const headingColorPicker = document.querySelector("#heading-color-picker");
 headingColorPicker.value = defaultHeadingColor;
 headingColorPicker.addEventListener("input", updateAllHeadings, false);
@@ -55,7 +55,7 @@ function updateAllHeadings(event) {
 }
 
 // Background Color Picker
-const defaultBackgroundColor = "#ffffff";
+const defaultBackgroundColor = "#2e66d6";
 const backgroundColorPicker = document.querySelector(
   "#background-color-picker"
 );
@@ -146,6 +146,11 @@ function handleHexInput(input, colorPicker, updateFunction) {
 handleHexInput(backgroundHexInput, backgroundColorPicker, updateBackground);
 handleHexInput(headingHexInput, headingColorPicker, updateAllHeadings);
 handleHexInput(paragraphHexInput, colorPicker, updateAllParagraphs);
+
+// Apply initial colors on page load
+updateBackground({ target: { value: defaultBackgroundColor } });
+updateAllHeadings({ target: { value: defaultHeadingColor } });
+updateAllParagraphs({ target: { value: defaultColor } });
 
 if (copyAllButton) {
   copyAllButton.addEventListener("click", () =>
